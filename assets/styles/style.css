@@ -8,10 +8,45 @@ header {
     display: inline;
  }
 
+
+ .jumbotron {
+   font-size: 20px;
+   padding: 60px;
+   background-color: #171717;
+   text-align: center;
+   color: #fff;
+}
+
+nav li {
+   display: inline;
+   list-style-type: none;
+   margin-right: 20px;
+}
+
+nav {
+   background-color: #303030;
+   padding: 5px;
+   position: sticky;
+   top: 0;
+}
+
+nav a {
+   font-size: 18px;
+   font-weight: 400;
+   text-decoration: none;
+   color: white;
+}
+
+nav a:hover {
+   font-weight: bold;
+   color: #ec4e73;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #000;
 }
 
 main {
@@ -19,40 +54,25 @@ main {
     overflow: auto;
  }
 
-h2 {
-    color: #00a2c6
- }
-  
- h3 {
-    color: #00a2c6
- }
+h2, h3 {
+   color: #fff;
+}
 
- footer {
-    padding: 20px;
-    color: white;
-    background-color: #00a2c6;
-    text-align: center;
-    font-weight: bold;
- }
+article {
+   color: #fff;
+}
 
- nav a {
-    font-size: 18px;
-    font-weight: 400;
-    text-decoration: none;
-    color: white;
- }
-
- nav a:hover {
-    font-weight: bold;
- }
+ 
 
  .profile header {
     text-align: center;
  }
 
  .featured-image {
-    width: 100%;
-    max-height: 300px;
+    float: right;
+    margin-left: 10px;
+    width: 300px;
+    max-height: 150px;
     object-fit: cover;
     object-position: center;
  }
@@ -62,32 +82,13 @@ h2 {
  }
 
  .card {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    background-color: #171717;
+    border-radius: 10px;
+    border: 1px solid #262626;
     padding: 20px;
     margin-top: 20px;
  }
 
- .jumbotron {
-    font-size: 20px;
-    padding: 60px;
-    background-color: #00c8eb;
-    text-align: center;
-    color: white;
- }
-
- nav li {
-    display: inline;
-    list-style-type: none;
-    margin-right: 20px;
- }
-
- nav {
-    background-color: #00a2c6;
-    padding: 5px;
-    position: sticky;
-    top: 0;
- }
 
  #content {
     float: left;
@@ -100,10 +101,28 @@ h2 {
     padding-left: 20px;
  }
 
+ footer {
+   padding: 20px;
+   color: white;
+   background-color: #303030;
+   text-align: center;
+   font-weight: bold;
+}
+
  @media screen and (max-width: 1000px) {
     #content,
     aside {
         width: 100%;
         padding: 0;
+    }
+
+    .featured-image {
+      display: block;
+      float: none;
+      margin: 0 auto;
+    }
+
+    .card {
+       overflow: hidden;
     }
  }
