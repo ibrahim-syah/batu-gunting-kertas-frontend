@@ -4,6 +4,8 @@ const rockp1Button = document.getElementById('rock');
 const paperp1Button = document.getElementById('paper');
 const scissorsp1Button = document.getElementById('scissors');
 const btnArray = [rockp1Button, paperp1Button, scissorsp1Button];
+const playAgainPrompt = document.querySelector('.prompt');
+const resultText = document.querySelector('.resultText');
 
 btnArray.forEach(button => {
     button.addEventListener('click', function(event) {
@@ -15,7 +17,6 @@ btnArray.forEach(button => {
         const playerHand = playerButton.getAttribute('id');
 
         const cpuButton = document.getElementById(cpuHand + 'Bot');
-        const resultText = document.querySelector('.resultText');
 
         const result = suit(playerHand, cpuHand);
         switch (result) {
@@ -40,6 +41,8 @@ btnArray.forEach(button => {
             default:
                 break;
         }
+        playAgainPrompt.removeAttribute('hidden');
+        
     })
 });
 
@@ -68,3 +71,12 @@ function suit(_player, _cpu) {
         }
     }
 }
+
+playAgainPrompt.addEventListener('click', function (event) {
+    let buttons = document.querySelectorAll('.option');
+    buttons.forEach(button => {
+        button.style.backgroundColor = 'white';
+    });
+    resultText.innerHTML = 'VS';
+    playAgainPrompt.setAttribute('hidden', 'true');
+});
