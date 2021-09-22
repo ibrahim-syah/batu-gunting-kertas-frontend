@@ -1,21 +1,21 @@
 "use strict";
 
-let rockp1Button = document.getElementById('rock');
-let paperp1Button = document.getElementById('paper');
-let scissorsp1Button = document.getElementById('scissors');
-let btnArray = [rockp1Button, paperp1Button, scissorsp1Button];
+const rockp1Button = document.getElementById('rock');
+const paperp1Button = document.getElementById('paper');
+const scissorsp1Button = document.getElementById('scissors');
+const btnArray = [rockp1Button, paperp1Button, scissorsp1Button];
 
 btnArray.forEach(button => {
     button.addEventListener('click', function(event) {
-        let playerButton = button;
+        const playerButton = button;
 
         const hands = ['rock', 'paper', 'scissors'];
         const cpuRandom = Math.floor(Math.random() * 3);
         const cpuHand = hands[cpuRandom];
         const playerHand = playerButton.getAttribute('id');
 
-        let cpuButton = document.getElementById(cpuHand + 'Bot');
-        let resultText = document.querySelector('.resultText');
+        const cpuButton = document.getElementById(cpuHand + 'Bot');
+        const resultText = document.querySelector('.resultText');
 
         const result = suit(playerHand, cpuHand);
         switch (result) {
@@ -43,42 +43,6 @@ btnArray.forEach(button => {
     })
 });
 
-
-// function round(_playerPick) {
-//     const hands = ['rock', 'paper', 'scissors'];
-//     const cpuRandom = Math.floor(Math.random() * 3);
-//     const cpuHand = hands[cpuRandom];
-//     const playerHand = hands[_playerPick];
-
-//     let playerButton = document.getElementById(playerHand + 'Player');
-//     let cpuButton = document.getElementById(cpuHand + 'Bot');
-//     let resultText = document.querySelector('.resultText');
-
-//     const result = suit(playerHand, cpuHand);
-//     switch (result) {
-//         case "tie":
-//             playerButton.style.backgroundColor = 'blue';
-//             cpuButton.style.backgroundColor = 'blue';
-//             resultText.innerHTML = 'Seri!';
-//             break;
-
-//         case "win":
-//             playerButton.style.backgroundColor = 'blue';
-//             cpuButton.style.backgroundColor = 'red';
-//             resultText.innerHTML = 'Anda Menang!';
-//             break;
-
-//         case "lose":
-//             playerButton.style.backgroundColor = 'red';
-//             cpuButton.style.backgroundColor = 'blue';
-//             resultText.innerHTML = 'Anda Kalah!';
-//             break;
-    
-//         default:
-//             break;
-//     }
-
-// }
 
 function suit(_player, _cpu) {
     if (_player === _cpu) {
