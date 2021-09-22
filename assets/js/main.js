@@ -42,6 +42,14 @@ btnArray.forEach(button => {
                 break;
         }
         playAgainPrompt.removeAttribute('hidden');
+
+        const history = {
+            player: playerHand,
+            cpu: cpuHand,
+            result: result
+        }
+        putHistory(history);
+        renderHistory();
         
     })
 });
