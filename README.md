@@ -8,4 +8,4 @@ git clone https://github.com/ibrahim-syah/batu-gunting-kertas-frontend.git
 ```
 Perintah di atas akan mengunduh seluruh repository ke direktori lokal yang anda tempati di terminal atau command prompt.
 
-Anda bisa melihat hasil akhir website nya dengan membuka index.html di browser anda atau langsung melalui ![GitHub Pages](https://ibrahim-syah.github.io/batu-gunting-kertas-frontend/)
+Anda bisa melihat hasil akhir website nya dengan membuka index.html di browser anda atau langsung melalui [GitHub Pages](https://ibrahim-syah.github.io/batu-gunting-kertas-frontend/)
